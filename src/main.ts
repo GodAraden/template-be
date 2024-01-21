@@ -50,7 +50,7 @@ async function bootstrap() {
 
   // app.useStaticAssets('images', { prefix: '/image' });
 
-  await app.listen(3000);
+  await app.listen(8888);
 
   return app;
 }

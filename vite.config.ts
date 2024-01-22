@@ -3,7 +3,7 @@ import { VitePluginNode } from 'vite-plugin-node';
 
 export default defineConfig({
   server: {
-    port: 3000,
+    port: 8888,
   },
   plugins: [
     ...VitePluginNode({
@@ -26,6 +26,6 @@ export default defineConfig({
       'class-validator',
       'fastify-swagger',
     ],
-    include: ['./src'],
+    include: ['src/**/*.ts'],
   },
 });

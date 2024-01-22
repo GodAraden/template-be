@@ -50,7 +50,8 @@ async function bootstrap() {
 
   // app.useStaticAssets('images', { prefix: '/image' });
 
-  await app.listen(8888);
+  // 打包后的产物不会用到 vite，所以仅在 PROD 模式下调用 app.listen 方法
+  if (import.meta.env.PROD) await app.listen(8888);
 
   return app;
 }
